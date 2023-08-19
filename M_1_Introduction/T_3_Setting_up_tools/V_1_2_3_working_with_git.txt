@@ -1,0 +1,78 @@
+1. Git Repository :
+Git repo contains files, history and config managed by git.
+
+ Q. How to create git repo ?
+    -> to create the git repo first we need to have one folder.
+    -> then we have to run "git inti" in that folder that command create the ".git" folder where our history and configuration are saved.
+    -> ".git" is hidden folder so we don't delete this folder by mistake.
+
+2. Remote Repository : 
+A code hosting server, for example "github".
+
+3. Stages in Git :
+	
+	-> there are 3 stages.
+		
+		-> Working Area (Untracked Area): Working area is where we are "Coding Live". and git can't track our file here. and no history maintained by git.
+			Q. How can we go from "working area" to "staging area" ?
+			  -> Use "git add <file_name>" to take files from "working area" to "staging area".
+			  -> And also use "git commit -m 'text message'" which help us to tell other what changes we made.
+
+		-> Staging Area (Tracked Area): Stage area is where git start to tracking the file "which file is changed", "by who", "when it's happed" all the details save by git.
+			Q. how the take our file to " staging area" to "git repo" OR get the file from "git repo"?
+			  -> Use "git push" to add all the files from "staging area" to "git repo". 
+			  -> Use "git pull" to get all the files from "git repo" to "staging area".
+		
+		-> Github Repo (Central Server): the online server that store our files. Example : github.
+
+Q. how to set username & email which shown we you commit something?
+
+   -> to set username : Use 'git config --global user.name "USER_NAME" '.
+   -> to set user email: Use 'get config --global user.email "USER_EMAIL" '.
+
+-> Use "git status" to see the status of "staging area".
+
+add file to stage area: 
+	-> if you want to any spacific file to add use "git add 'FILE_NAME'" OR you want to add more then one file use "git add . ".
+commit changes: 
+	-> so, files are added into "staging area". use "git commit -m 'text message'" to commit your changes.
+To see the changes:
+	-> so, use "git log" to see the details about commit( who did which commit) and use "git log --oneline" to see the details in one line example: af93ae0 (HEAD -> master) adding sample-1.txt and sample-2.txt file
+
+
+how to create repo in github.
+  -> go to github -> Repositories -> New -> Give the valid name to repo. -> choose public OR private. -> create repository. Now you can see the repository that you created.
+
+how to clone the repo.
+  -> go to repo which you want to clone -> Code -> Copy the "HTTPS" link -> goto folder where you want clone open in gitbash tarminal use "git clone 'LINK'"
+  -> now we create file with help of github ui create the file "sample-3.txt" and write something init. file is create but now in you github repo there is 3 files but in you local machine have only 2 file, so we have 
+	use "git pull" commnd to get the changed files into local machine.
+
+BRANCHES:
+	To check to current branch use:
+		-> git branch
+	
+	To create new branch use:
+		-> git checkout -b <branch_name>.
+	
+	To switch to other branch we use:
+		-> git checkout <branch_name>.
+		Note: we use command without -b.
+	
+	To merge your new branch(new-feature) into master or main:
+		-> create new branch by using "git checkout -b <branch_name>.".
+		-> goto branches find the branch which you want to merge.
+		-> then click on "new pull request".
+		-> then add or leave the comment.
+		-> click on "Create pull request".
+		-> then it take some time to verify then click on "Merge pull request.". and then click on "Confirm merge".
+		-> Now your code is merge with master branch but when you get 
+			status of master branch by using "git status" it not show the commit on master branch which makes on other branch 
+			which we just merge to get it right we pull the changes into master branch.
+		-> Goto main or master branch and using "pull origin <branch_name which merges other branch into it. ("master" in my case)>".
+		-> now verify the changes by "git log". 
+
+other simple commands.
+ -> to create a file from bash terminal use "touch <FILE_NAME.TYPE>" .
+ -> to some file on bash terminal use "nano <FILE_NAME.TYPE>" .
+ -> if you want see text file in bash terminal use "cat <FILE_NAME.TYPE> .
