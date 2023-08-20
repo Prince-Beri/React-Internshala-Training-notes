@@ -1,0 +1,50 @@
+What is Node.js ?
+    -> Node.js is javascript run time environment.
+
+How to communicate between file in Node.js?
+    -> To communicate between files we use export and import.
+        -> eg. for export we use:
+            -> const myName = "Prince";
+                module.exports = {
+                    // key: value
+                    // myName: myName
+                    
+                    // if key and value has same name we can directly write key name.
+                    myName
+                }
+    -> and for use in other file we use import.
+           // no need to specify the extension in common js.
+        -> eg. const importedSecondModule = require("./second");
+            // it gives you the object.
+            
+            console.log(importedSecondModule);
+            // like: { myName: 'Prince' }
+            
+            // if you want to access the values use like this.
+            console.log(importedSecondModule.myName);
+            
+            // it will print "Prince".
+
+->  we can also use "EcmaScript Modules".
+
+    -> To use EcmaScript for export and import we have create files with ".mjs" extension.
+
+        -> To export we use:
+            eg. const myName = "Prince"; 
+                export { myName };
+
+        -> To import: use the same variable name as you give in second.mjs file.
+            eg. import { myName } from "./second.mjs";
+                console.log(myName);
+
+What is NPM ? 
+    -> It is node package manager for Node.js. Its comes with Node.js.
+    
+    -> To Initilize npm into your project we use:
+        -> goto terminal and enter "npm init".
+
+    -> To check the globle packages you install we use:
+        -> npm list -g --depth=0
+    
+    -> if we delete the node_modules folder and reinstall the all deleted modules we use:
+        -> "npm install" it install all the dependances which is present inside package.json file.
