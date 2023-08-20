@@ -15,6 +15,7 @@
 // const myName = "Prince";
 // export { myName };
 
+//  cowsay is module which print the cow inside terminal window.
 import cowsay from "cowsay";
 
 console.log(
