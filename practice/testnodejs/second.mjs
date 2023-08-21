@@ -4,11 +4,10 @@
 // module.exports = {
 //     // variable: value
 //     // myName: myName
-    
+
 //     // if both has same name we can directly write variable name.
 //     myName
 // }
-
 
 // export in EcmaScript Module.
 
@@ -16,12 +15,12 @@
 // export { myName };
 
 //  cowsay is module which print the cow inside terminal window.
-import cowsay from "cowsay";
+import cowsay from 'cowsay';
 
 console.log(
-    cowsay.say({
-        text: "I'm a moooodule",
-        e: "oO",
-        T: "U ",
-    })
+  cowsay.say({
+    text: "I'm a moooodule",
+    e: 'oO',
+    T: 'U '
+  })
 );
