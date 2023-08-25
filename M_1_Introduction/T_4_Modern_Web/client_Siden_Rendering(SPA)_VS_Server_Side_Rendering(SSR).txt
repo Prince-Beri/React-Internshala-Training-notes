@@ -1,0 +1,32 @@
+There are 3 types for rendering.
+    -> SSR : Server side rendering(SEO friendlly).
+    -> CSR : Client side rendering also called SPA(Single page applications)(Not so SEO friendlly).
+    -> Hybrid.
+
+SEO : Search Engine Optmization(SEO) is the process of improving the quality of website 
+traffic to a website or a web page from search engines. SEO targets unpaid traffic 
+(Known as "natural" or "orgainc" results) rather than direct traffic or paid traffic.
+
+                SSR     CSR
+SEO             +      + -
+IN-APP feel     -       +
+Requires JS     -       +
+
+There are 2 examples of SSR websites Steam (dynamic pages) and netlify(static pages).
+
+How we can identify the web page is SSR or not ?
+    -> If a server returns different markup for every pages and there have different meta 
+    tags for each page, the server uses either:
+    (a) server side rendering.
+    (b) static pages.
+
+Static pages: 
+    -> Markup is already created for all pages before it is placed on the server. it is Not 
+    dynamically assembled on every request. The server sends the same html markup all the time.
+
+Server side rendering: 
+    -> Markup is dynamically generated on every request. The server takes data from database
+    ,injects the data into html template, then sends back the final markup.
+
+
+
