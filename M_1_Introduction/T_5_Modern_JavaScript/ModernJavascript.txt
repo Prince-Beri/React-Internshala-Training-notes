@@ -43,3 +43,27 @@ eg.
     console.log(result);
 
     output: [ 8, 6, 4, 12 ]
+
+4. what is reduce method ?
+    -> array.reduce() method is like array.map() method but it return the single value and it take 2 arguments 1st is callback function 
+    , 2nd is accumulater(starting value (0)).
+    -> In callback function we have 2 arguments 1st is previous value also called (accumulater), 2nd is current value.
+    eg. const hello = [7, 4, 9, 4, 5];
+
+        const result = hello.reduce(function(prevVal, curVal){
+            console.log(prevVal, curVal);
+            return prevVal + curVal;
+        }, 0);
+
+        console.log('result', result);
+        output: 0 7
+                7 4
+                11 9
+                20 4
+                24 5
+                result 29
+
+    If you want to create object from an array you need pass 2nd argument as empty object {}.
+        -> 
+
+    Note: Always specify intial value (second argument) as otherwise array.reduce() method work slightly different.
