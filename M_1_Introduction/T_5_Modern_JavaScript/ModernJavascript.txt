@@ -64,6 +64,15 @@ eg.
                 result 29
 
     If you want to create object from an array you need pass 2nd argument as empty object {}.
-        -> 
+        -> eg.
+                const result = hello.reduce(function(acc, curVal, curIdx){
+                const mappedElem = {};
+                mappedElem[curIdx] = curVal;
+                return Object.assign(acc, mappedElem)
+            }, {});
+
+            console.log('result', result);
+
+            // output: result { '0': 7, '1': 4, '2': 9, '3': 4, '4': 5 }
 
     Note: Always specify intial value (second argument) as otherwise array.reduce() method work slightly different.
