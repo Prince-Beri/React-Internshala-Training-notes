@@ -44,7 +44,7 @@ eg.
 
     output: [ 8, 6, 4, 12 ]
 
-4. what is reduce method ?
+3. what is reduce method ?
     -> array.reduce() method is like array.map() method but it return the single value and it take 2 arguments 1st is callback function 
     , 2nd is accumulater(starting value (0)).
     -> In callback function we have 2 arguments 1st is previous value also called (accumulater), 2nd is current value.
@@ -76,3 +76,54 @@ eg.
             // output: result { '0': 7, '1': 4, '2': 9, '3': 4, '4': 5 }
 
     Note: Always specify intial value (second argument) as otherwise array.reduce() method work slightly different.
+
+4. Function expressions vs function declaration.
+    -> 
+
+    eg. 
+    // function declaration: 
+    function hello(){
+        console.log("Prince");
+    }
+
+    // function expression  
+    const hello2 = function(){
+        console.log("Prince");
+    }
+
+    // calling the both functions
+    hello();
+    hello2();
+
+    Note: Expression is an entity that evaluates to a value.
+    eg. const h = 5;
+        variable h evaluates to value 5.    
+
+    difference between function declaration and function expression.
+    -> if we move both the function calles to top of the code.
+    eg.
+
+    // calling the both functions
+    hello();
+    hello2();
+
+    // function declaration: 
+    function hello(){
+        console.log("Prince");
+    }
+
+    // function expression  
+    const hello2 = function(){
+        console.log("Prince");
+    }
+
+    if we now run the program we get the Reference error.
+    output: 
+    Prince
+    ReferenceError: Cannot access 'hello2' before initialization.
+
+    why? 
+    -> Hoisting is when the code (declaration) are evaluated by JS prior to code execution.
+    In simple words JS complier move the all the declaration part of the code to top of the program.
+    But Expression are evaluated by JS at the execution time, as they appear in the code.
+
