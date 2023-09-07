@@ -127,3 +127,64 @@ eg.
     In simple words JS complier move the all the declaration part of the code to top of the program.
     But Expression are evaluated by JS at the execution time, as they appear in the code.
 
+4. arrow function and default function arguments.
+    -> 1st difference
+    
+     normal function declaration. 
+        eg. function myName(){
+            console.log("Prince");
+        }
+
+        arrow function expression.
+        eg. const myName = () => {
+            console.log("Prince");
+        }
+
+        Note: arrow function uses the function expression that why we can't call function before declaring (hoisting) it.
+        if we do we got ReferenceError.
+
+       2nd dufference "This" keyword in arrow function and normal function.
+            -> A regular function will always define its "this" value. The this keyword is handled differently by arrow functions. 
+            Since it lacks a context of its own, they are unable to define its own. Anytime you call this, they take the value of this from 
+            the parent scope.
+
+        3rd difference:
+            -> we can make more short syntax with arrow function.
+            eg. 
+                const myName = () => "Prince";
+
+                Note: use this syntax if we return only single value.
+
+            -> if we want to return single object we have to use parentheses ().
+            eg. const myName = () => ({name: "Prince"});
+    
+    Default function arguments.
+        -> function myName(name){
+                console.log("My name is :", name);
+            }
+            myName();
+            if we run this program now we get "My name is : undefined".
+            because we don't passes the function argument in myName() method.
+            In case don't get the result we want in that case we need some fallback value.
+            which is used went we dont passes the argument to the funtion.
+
+            function myName(name = "Prince"){
+                console.log("My name is : ", name);
+            }
+
+            myName();
+            if we don't pass any argument to the function. the function uses the default argument.(name = "Prince").
+            and if we passes the value to the function it uses that value not the default argument.
+            eg. function myName(name = "Prince"){
+                        console.log("My name is : ", name);
+                    }
+
+                    myName("Anmol");
+
+    -> In last case we passes the one value to function and 2nd value is default argument.
+        eg. function myName(name, age = 25){
+                console.log("My name is : ", name, "and age is: " ,age);
+            }
+            myName("Prince");
+        
+        output: My name is :  Prince and age is:  25
