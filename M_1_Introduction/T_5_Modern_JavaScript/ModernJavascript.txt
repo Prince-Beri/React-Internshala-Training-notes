@@ -188,3 +188,19 @@ eg.
             myName("Prince");
         
         output: My name is :  Prince and age is:  25
+
+
+String literals and string interpolation.
+
+    -> For interpolation of string we use backticks(``). means we can add variables into string which help us to generate dynamic output.
+    eg. const name = "Prince";
+        const age = 25;
+        const result = `My name is ${name}. and age is ${age}`;
+        1. we use backticks(``).
+        2. we put any javascript code inside ${javascript code here....} curly braces ({}).
+        3. string appear as it is inside backticks.
+        
+    Note: The string with backticks (``) represent as it is. means if we add some extra space they included into string unlike concatenation operator(+) which remove extra spaces.
+
+
+
