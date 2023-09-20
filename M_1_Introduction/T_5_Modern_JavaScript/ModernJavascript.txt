@@ -199,8 +199,82 @@ String literals and string interpolation.
         1. we use backticks(``).
         2. we put any javascript code inside ${javascript code here....} curly braces ({}).
         3. string appear as it is inside backticks.
-        
+
     Note: The string with backticks (``) represent as it is. means if we add some extra space they included into string unlike concatenation operator(+) which remove extra spaces.
 
+
+
+Object and Array destructuring 
+
+    -> // Object and array destructuring.
+        
+        -> Object destructuring syntax 1.
+        
+        const car = {
+            carName: "THAR 4X4",
+            color: "black",
+            enginType: "petrol",
+            model: "thar",
+        }
+
+        const {color, enginType, model, carName} = car;
+
+        console.log("car name: ", carName);
+        console.log("car model: ", model);
+        console.log("car engin: ", enginType);
+        console.log("car color: ", color);
+
+        -> Object destructuring syntax 2 (object key: variable_name).
+
+            // syntax 2 with addition variables.
+
+            const car = {
+                carName: "THAR 4X4",
+                model: "Thar",
+                color: "black",
+                enginType: "petrol"
+            }
+
+            const {carName: cName, enginType: cType} = car;
+
+            console.log("car name: ", cName);
+            console.log("engin type is: ", cType);
+
+
+        -> Object destructuring with default arguments(fallback values).
+
+            const <function_name> = (argument's(someObject in this case.) = { empty object as a defalut value. }) => {
+                const {object destructuring...} = objectName;
+                
+                Note : you also give default value to object keys.
+                const {objectKey1 = "green", objectKey2 = 5} = objectName;
+
+                use the object here.
+                use the object here.
+                use the object here.
+                use the object here.
+            }
+
+            eg.
+
+            const car = {
+                    carName: "THAR 4X4",
+                    carModel: "mahindra thar",
+                    color: "black",
+                    enginType: "petrol",
+                    gears: 6
+                }
+
+                const someFunction = (carObj = {}) => {
+                    const {carName, carModel, color, enginType, gears = 5} = carObj;
+
+                    console.log("car name: ", carName);
+                    console.log("car model: ", carModel);
+                    console.log("car color: ", color);
+                    console.log("car enginType: ", enginType);
+                    console.log("no. of gears: ", gears);
+                }
+
+                someFunction(car);
 
 
